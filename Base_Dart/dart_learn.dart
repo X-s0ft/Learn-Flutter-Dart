@@ -173,8 +173,26 @@ void main(){
   sayHello("Данила", 4);
   */
   /*3*/
+  /*
   sayHello(name: "Данила", count: 0);
+  */
+  /*Number 10 Classes and objects*/
+  Password ps = Password();
+  ps.value = "asdsdasad";
+  print(ps.isValid());
+  
+
 }
+class Password{
+  String value = "";
+  bool isValid(){
+    return value.length < 7;
+    }
+  }
+  
+  
+
+
 /*
 void sayHello(String name){
   print("Привет " + name);
@@ -187,11 +205,15 @@ void sayHello(String name, int counter){
   }
 }
 */
+/*
 void sayHello({required String name, int count = 1}){
   for(int i = 0; i <= count; i++){
     print("Привет, $name");
   }
 }
+*/
+/*
 int Test_2(int a, int b){
     return a ~/ b;
   }
+*/
