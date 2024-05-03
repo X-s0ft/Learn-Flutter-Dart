@@ -1,5 +1,7 @@
 
 
+import 'dart:math';
+
 void main(){
 
   /*
@@ -115,7 +117,49 @@ void main(){
   */
 
   /*Numbefr 8*/
-  
+  /*
+  for (int i = 0; i <= 9; i++){
+    print("Квадрат $i равен ${i* i} \n");
+  }
+
+  int counter = -1;
+  do{
+    print(counter);
+    counter++;
+  }
+  while(counter > 1);
+  */
+
+  /*1*/
+  /*
+  int counter = 0;
+  while(counter < 10){
+    print(counter++);
+  }
+  */
+  /*2*/
+  /*
+  for(int i = 1; i <= 10; i++){
+    print(pow(i, 2));
+  }
+  */
+  /*3*/
+  /*
+  for(int i = 2; i < 64;){
+    print(i*=2);
+  }
+  */
+  /*
+  /*4*/
+  for(int i = 10; i >= 2; i--){
+    print(i);
+  }
+  */
+
+  /*5*/
+  for(int i = 0; i <= 10; i+=1){
+    print(i/10);
+  }
 }
 
 int Test_2(int a, int b){
