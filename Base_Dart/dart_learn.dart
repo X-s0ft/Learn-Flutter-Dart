@@ -1,5 +1,6 @@
 
 
+import 'dart:async';
 import 'dart:math';
 
 void main(){
@@ -155,13 +156,42 @@ void main(){
     print(i);
   }
   */
-
+  /*
   /*5*/
   for(int i = 0; i <= 10; i+=1){
     print(i/10);
   }
-}
+  */
 
+  /*Number 9 Function*/
+  /*1*/
+  /*
+  sayHello("Данила");
+  */
+  /*2*/
+  /*
+  sayHello("Данила", 4);
+  */
+  /*3*/
+  sayHello(name: "Данила", count: 0);
+}
+/*
+void sayHello(String name){
+  print("Привет " + name);
+}
+*/
+/*
+void sayHello(String name, int counter){
+  for(int i = 0; i < counter; i++){
+    print("Привет, $name");
+  }
+}
+*/
+void sayHello({required String name, int count = 1}){
+  for(int i = 0; i <= count; i++){
+    print("Привет, $name");
+  }
+}
 int Test_2(int a, int b){
     return a ~/ b;
   }
