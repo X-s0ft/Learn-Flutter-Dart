@@ -191,7 +191,13 @@ void main(){
   print(Vlad.name);
   print(Vlad.age);
 
+  // Age.adx = 12;
+
   
+}
+
+class Age{
+  static const int adx = 10;
 }
 
 /*
