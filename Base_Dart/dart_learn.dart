@@ -1,7 +1,7 @@
-
-
 import 'dart:async';
 import 'dart:math';
+
+import 'person.dart';
 
 void main(){
 
@@ -177,22 +177,31 @@ void main(){
   sayHello(name: "Данила", count: 0);
   */
   /*Number 10 Classes and objects*/
+  /*
   Password ps = Password();
   ps.value = "asdsdasad";
   print(ps.isValid());
-  
+  */
 
+  /*Number 11*/
+  Person Danila = Person("Данила", 20);
+  Danila.display();
+
+  Person Vlad = Person("Влад", 19);
+  print(Vlad.name);
+  print(Vlad.age);
+
+  
 }
+
+/*
 class Password{
   String value = "";
   bool isValid(){
     return value.length < 7;
     }
   }
-  
-  
-
-
+*/
 /*
 void sayHello(String name){
   print("Привет " + name);
