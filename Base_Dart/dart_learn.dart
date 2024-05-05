@@ -1,7 +1,6 @@
 // import 'dart:async';
 // import 'dart:math';
 
-import 'person.dart';
 
 void main(){
 
@@ -184,21 +183,52 @@ void main(){
   */
 
   /*Number 11*/
-  Person Danila = Person("Данила", 20);
-  Danila.display();
+  // Person Danila = Person("Данила", 20);
+  // Danila.display();
 
-  Person Vlad = Person("Влад", 19);
-  print(Vlad.name);
-  print(Vlad.age);
+  // Person Vlad = Person("Влад", 19);
+  // print(Vlad.name);
+  // print(Vlad.age);
 
   // Age.adx = 12;
 
+  /*Number 12 List, set, iterable, records*/
+  /*1*/
+  // var week = [];
+
+  // week.addAll(["Понедельник", "Вторник", "Среда", "Четверг", 
+  // "Пятница", "Суббота", "Воскресенье"]);
+
+  // week.forEach(print);
+
+  // week.removeRange(5, 7);
+
+  // week.forEach(print);
+
+  /*2*/
+  // List<String> week = List.unmodifiable(["Понедельник", "Вторник", "Среда", "Четверг", 
+  // "Пятница", "Суббота", "Воскресенье"]);
+  // week.forEach(print);
   
+  /*3*/
+  var humans = [Person("Данила", 21), Person("Влад", 19), 
+  Person("Максим", 20), Person("Андрей", 23)];
+  humans.sort((item1, item2) => item1.age - item2.age);
+  for(final humans in humans){
+    print("${humans.name}: ${humans.age}");
+  }
+
 }
 
-class Age{
-  static const int adx = 10;
+class Person{
+  String name;
+  int age;
+  Person(this.name, this.age);
 }
+
+// class Age{
+//   static const int adx = 10;
+// }
 
 /*
 class Password{
