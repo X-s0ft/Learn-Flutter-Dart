@@ -4,8 +4,8 @@
 
 void main(){
 
-  /*
   /*Number 1*/
+   /*
   const double value1 = 13;
   const double value2 = 24;
   const double value3 = 32;
@@ -13,17 +13,17 @@ void main(){
   const double averageValue = (value1+value2+value3)/3;
   print("Avarage value: $averageValue");
   */
-
-  /*
+  
   /*Number 2*/
+   /*
   int year = 365;
   int week = 7;
   int answer = Test_2(year, week);
   print("In a year: $answer(answer) weeks");
   */
-
-  /*
+  
   /*Number 3*/
+   /*
   var _text = '''
   Многострочная
   строка
@@ -38,8 +38,8 @@ void main(){
   print(_textt);
   */
 
-  /*
   /*Number 4*/
+   /*
   int? qe = 12;
   int fa = qe;
   print(fa);
@@ -50,8 +50,8 @@ void main(){
   print(qe);
   */
 
-  /*
   /*Number 5*/
+  /*
   int as = 10 + 1;
   print(as);
   int xc = 1433 ~/ 32;
@@ -75,8 +75,8 @@ void main(){
   print(vas);
   */
 
-  /*
   /*Number 6*/
+  /*
   /*1*/ 
   const int myAge = 20;
   const bool isChild = myAge <= 16;
@@ -97,8 +97,8 @@ void main(){
   print(issChild);
   */
 
-  /*
   /*Number 7*/
+  /*
   /*1*/
   int experience = 1;
   if(experience < 2){
@@ -117,6 +117,7 @@ void main(){
   */
 
   /*Numbefr 8*/
+  /*
   /*
   for (int i = 0; i <= 9; i++){
     print("Квадрат $i равен ${i* i} \n");
@@ -161,8 +162,10 @@ void main(){
     print(i/10);
   }
   */
-
+  */
+  
   /*Number 9 Function*/
+  /*
   /*1*/
   /*
   sayHello("Данила");
@@ -175,6 +178,8 @@ void main(){
   /*
   sayHello(name: "Данила", count: 0);
   */
+  */
+  
   /*Number 10 Classes and objects*/
   /*
   Password ps = Password();
@@ -183,6 +188,7 @@ void main(){
   */
 
   /*Number 11*/
+  /*
   // Person Danila = Person("Данила", 20);
   // Danila.display();
 
@@ -191,8 +197,10 @@ void main(){
   // print(Vlad.age);
 
   // Age.adx = 12;
+  */
 
-  /*Number 12 List, set, iterable, records*/
+  /*Number 12 Lists*/
+  /*
   /*1*/
   // var week = [];
 
@@ -211,20 +219,40 @@ void main(){
   // week.forEach(print);
   
   /*3*/
-  var humans = [Person("Данила", 21), Person("Влад", 19), 
-  Person("Максим", 20), Person("Андрей", 23)];
-  humans.sort((item1, item2) => item1.age - item2.age);
-  for(final humans in humans){
-    print("${humans.name}: ${humans.age}");
-  }
+  // var humans = [Person("Данила", 21), Person("Влад", 19), 
+  // Person("Максим", 20), Person("Андрей", 23)];
+  // humans.sort((item1, item2) => item1.age - item2.age);
+  // for(final humans in humans){
+  //   print("${humans.name}: ${humans.age}");
+  // }
+  */
+  
+  /*Number 13 Set - множество уникальных значений*/
+  /*
+  Set<int> counter = {1, 2, 3, 4, 5}; // при добавлении похожих элементов не будет их добавлять
+  print(counter);
+  */
 
+
+  /*Number 14 Map*/
+  Map<int, String> beef = 
+  {
+    1 : "Василий",
+    2 : "Влад",
+    3 : "Макс"
+  };
+  print(beef);
 }
 
+
+
+/*
 class Person{
   String name;
   int age;
   Person(this.name, this.age);
 }
+*/
 
 // class Age{
 //   static const int adx = 10;
