@@ -235,13 +235,16 @@ void main(){
 
 
   /*Number 14 Map*/
-  Map<int, String> beef = 
+  /*
+  Map<int, String> people = 
   {
     1 : "Василий",
     2 : "Влад",
     3 : "Макс"
   };
-  print(beef);
+  print(people);
+  */
+  
 }
 
 
