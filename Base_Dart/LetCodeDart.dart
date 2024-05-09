@@ -23,7 +23,15 @@ void main(){
 //   }
 // }
 bool isPalindrome(int x){
-  return x > 0 ? true : false;
+    String Y = x.toString();
+    String reversedY = Y.split('').reversed.join('');
+    // int reversedX = int.parse(reversedY);
+    if(reversedY == x.toString()){
+      return true;
+    }
+    else{
+      return false;
+    }
 }
 
 
