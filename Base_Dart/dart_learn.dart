@@ -15,7 +15,7 @@ void main(){
   */
   
   /*Number 2*/
-   /*
+  /*
   int year = 365;
   int week = 7;
   int answer = Test_2(year, week);
@@ -251,7 +251,7 @@ void main(){
   int b = 2;
   a > b ? 'a больше' : 'b больше';
   */
-
+  
 
 }
 
