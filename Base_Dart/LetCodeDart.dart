@@ -18,8 +18,14 @@ void main(){
     // Solution lcp = Solution();
     // print(lcp.longestCommonPrefix(["flower", "flow", "flight"]));
     // print(lcp.longestCommonPrefix(["dog", "racecar","car"]));
-  /* Number 5 Score of a string*/
-  
+  /* Number 5 Valid Parentheses*/
+  // Solution ans = Solution();
+  // print(ans.isValid("()")); 
+  // print(ans.isValid("([]"));
+  // print(ans.isValid("(]"));
+  // print(ans.isValid("{}{}{}{}{}{}"));
+
+
 }
 
 // class Soulution{
@@ -75,3 +81,27 @@ void main(){
 //     return pref;
 //   }
 // }
+
+// class Solution {
+//   bool isValid(String s) {
+//     List<String> ci = [];
+//     for (int i =0; i < s.length; i++)
+//     {
+//       String si = s[i];
+//       if (si == "(" || si == "[" || si == "{")
+//       {
+//         ci.add(si);
+//       }
+//       else
+//       {
+//         if (ci.isEmpty || si == ")" && ci.last != '(' || si == ']' && ci.last != '[' || si == '}' && ci.last != '{')
+//         {
+//           return false;
+//         }
+//         ci.removeLast();
+//       }
+//     }
+//     return ci.isEmpty;
+//   }
+// }
+
