@@ -1,1 +1,1 @@
-export 'ruble_Inf.dart';
+export 'ruble_inf.dart';

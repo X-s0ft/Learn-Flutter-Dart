@@ -1,11 +1,7 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:dio/dio.dart';
+import 'repository.dart';
 
-import 'package:testapp/repositories/crypto_repositories/abstract_repossitory.dart';
-
-import 'models/crypto_model.dart';
-
-class CryptoRubRepositories implements AbstractRepossitory {
+class CryptoRubRepositories implements AbstractRepository {
   CryptoRubRepositories({
     required this.dio,
   });
@@ -13,7 +9,7 @@ class CryptoRubRepositories implements AbstractRepossitory {
 
   @override
   Future<List<CryptoModel>> getCoinsList() async {
-    final response = await Dio().get(
+    final response = await dio.get(
         'https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,ETH,BNB,1ST,1WO,BETR,BEZ,BTCM,CSP&tsyms=RUB');
     final data = response.data as Map<String, dynamic>;
     final dataRaw = data['RAW'] as Map<String, dynamic>;

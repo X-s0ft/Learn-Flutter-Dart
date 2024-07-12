@@ -1,5 +1,5 @@
 import 'package:testapp/repositories/crypto_repositories/models/crypto_model.dart';
 
-abstract class AbstractRepossitory {
+abstract class AbstractRepository {
    Future<List<CryptoModel>> getCoinsList();
 }

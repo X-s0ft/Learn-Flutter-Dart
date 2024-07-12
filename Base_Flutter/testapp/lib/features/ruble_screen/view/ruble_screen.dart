@@ -17,7 +17,7 @@ class _RubleScreenState extends State<RubleScreen> {
   @override
   void didChangeDependencies() {
     final arg = ModalRoute.of(context)?.settings.arguments;
-    // ALT assert(arg == null && arg is String, 'Provide String arg'); ->
+    // ALTERNITY assert(arg == null && arg is String, 'Provide String arg'); ->
     if(arg == null){
       dev.log('Provide arg');
       return;
