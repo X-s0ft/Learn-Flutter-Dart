@@ -31,43 +31,45 @@ class _RubleInfState extends State<RubleInf> {
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         ),
-        body: BlocBuilder<CryptoListBloc, CryptoListState>(
-          bloc: _cryptoListBloc,
-          builder: (context, state) {
-            if (state is CryptoListLoaded) {
-              return ListView.separated(
-                  padding: const EdgeInsets.only(top: 20),
-                  itemCount: state.coinList.length,
-                  separatorBuilder: (context, index) => const Divider(),
-                  itemBuilder: (context, i) {
-                    final coin = state.coinList[i];
-                    return Rublelist(coin: coin);
-                  });
-            }
-            if (state is CryptoListLoadingFailure) {
-              return Center(
-                child: Text(state.exeption?.toString() ?? 'Exeption'),
-              );
-            }
-            return const Center(child: CircularProgressIndicator());
+        body: RefreshIndicator(
+          onRefresh: () async {
+            _cryptoListBloc.add(LoadCryptoList());
           },
-        )
-
-        // _cryptoList == null
-        //     ? const Center(child: CircularProgressIndicator())
-        //     : ListView.separated(
-        //         padding: const EdgeInsets.only(top: 20),
-        //         itemCount: _cryptoList!.length,
-        //         separatorBuilder: (context, index) => const Divider(),
-        //         itemBuilder: (context, i) {
-        //           final coin = _cryptoList![i];
-        //           return Rublelist(coin: coin);
-        //         }),
-        );
+          child: BlocBuilder<CryptoListBloc, CryptoListState>(
+            bloc: _cryptoListBloc,
+            builder: (context, state) {
+              if (state is CryptoListLoaded) {
+                return ListView.separated(
+                    padding: const EdgeInsets.only(top: 20),
+                    itemCount: state.coinList.length,
+                    separatorBuilder: (context, index) => const Divider(),
+                    itemBuilder: (context, i) {
+                      final coin = state.coinList[i];
+                      return Rublelist(coin: coin);
+                    });
+              }
+              if (state is CryptoListLoadingFailure) {
+                return Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      const Text('Something wrong'),
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      TextButton(
+                          onPressed: () {
+                            _cryptoListBloc.add(LoadCryptoList());
+                          },
+                          child: const Text('Try again'))
+                    ],
+                  ),
+                );
+              }
+              return const Center(child: CircularProgressIndicator());
+            },
+          ),
+        ));
   }
-
-  // Future<void> _loadAPI() async {
-  //   _cryptoList = await GetIt.I<AbstractRepository>().getCoinsList();
-  //   setState(() {});
-  // }
 }

@@ -1,17 +1,24 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 part of 'coin_block.dart';
 
-class CryptoListState {}
+abstract class CryptoListState extends Equatable {}
 
-class CryptoListInitial extends CryptoListState {}
+class CryptoListInitial extends CryptoListState {
+  @override
+  List<Object?> get props => [];
+}
 
-class CryptoListLoading extends CryptoListState {}
+class CryptoListLoading extends CryptoListState {
+  @override
+  List<Object?> get props => [];
+}
 
 class CryptoListLoaded extends CryptoListState {
   CryptoListLoaded({
     required this.coinList,
   });
   final List<CryptoModel> coinList;
+  @override
+  List<Object?> get props => [coinList];
 }
 
 class CryptoListLoadingFailure extends CryptoListState {
@@ -19,4 +26,7 @@ class CryptoListLoadingFailure extends CryptoListState {
     this.exeption,
   });
   final Object? exeption;
+  
+  @override
+  List<Object?> get props => [exeption];
 }

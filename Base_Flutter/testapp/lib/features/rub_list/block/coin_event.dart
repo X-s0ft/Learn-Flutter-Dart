@@ -1,5 +1,9 @@
 part of 'coin_block.dart';
 
-class CryptoListEvent {}
+abstract class CryptoListEvent extends Equatable{}
 
-class LoadCryptoList extends CryptoListEvent{}
+class LoadCryptoList extends CryptoListEvent{
+  @override
+  List<Object?> get props => [];
+}
+
