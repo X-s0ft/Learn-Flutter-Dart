@@ -15,13 +15,10 @@ class CryptoRubRepositories implements AbstractRepository {
     final dataRaw = data['RAW'] as Map<String, dynamic>;
     final cryptoList = dataRaw.entries.map((e) {
       final dataRub =
-          (e.value as Map<String, dynamic>)['RUB'] as Map<String, dynamic>;
-      final price = dataRub['PRICE'];
-      final imageURL = dataRub['IMAGEURL'];
-      return CryptoModel(
-          name: e.key,
-          priceInRUB: price,
-          imafeURL: 'https://www.cryptocompare.com/$imageURL');
+          (e.value as Map<String, dynamic>)['USD'] as Map<String, dynamic>;
+      final details = CryptoCoinDetails.fromJson(dataRub) ;
+
+      return CryptoModel(name: e.key, details: details);
     }).toList();
     return cryptoList;
   }

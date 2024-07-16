@@ -1,5 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
+import 'package:get_it/get_it.dart';
+import 'package:talker_flutter/talker_flutter.dart';
 import '../../../repositories/crypto_repositories/repository.dart';
 
 part 'coin_event.dart';
@@ -15,9 +17,10 @@ class CryptoListBloc extends Bloc<CryptoListEvent, CryptoListState> {
         emit(CryptoListLoading());
         final coinList = await coinRepository.getCoinsList();
         emit(CryptoListLoaded(coinList: coinList));
-      } catch (e) {
+      } catch (e, stact) {
         emit(CryptoListLoadingFailure(exeption: e));
-      }
+        GetIt.I<Talker>().handle(e, stact);
+      } 
     });
   }
 

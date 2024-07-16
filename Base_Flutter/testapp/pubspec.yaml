@@ -11,18 +11,25 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.6
-  flutter_svg: ^2.0.10+1
-  dio: ^5.5.0+1
+  cupertino_icons: ^1.0.8
+  flutter_svg: ^2.0.10
+  dio: ^5.5.0
   get_it: ^7.7.0
   bloc: ^8.1.4
   flutter_bloc: ^8.1.6
   equatable: ^2.0.5
+  talker: ^4.3.2
+  talker_flutter: ^4.3.2
+  firebase_core: ^3.2.0
+  json_annotation: ^4.9.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.0
+  flutter_lints: ^4.0.0
+  json_serializable: ^6.8.0
+  build_runner: ^2.4.11
+  
 
 flutter:
   uses-material-design: true

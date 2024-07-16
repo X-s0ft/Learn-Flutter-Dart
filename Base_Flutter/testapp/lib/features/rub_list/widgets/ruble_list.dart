@@ -12,21 +12,21 @@ class Rublelist extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final coindetails = coin.details;
     return ListTile(
-      
-    leading: Image.network(coin.imafeURL),
-    title: Text(
-      coin.name,
-      style: theme.textTheme.bodySmall,
-    ),
-    subtitle: Text(
-      '${coin.priceInRUB} P',
-      style: theme.textTheme.labelSmall,
-    ),
-    trailing: const Icon(Icons.arrow_forward_ios),
-    onTap: () {
-      Navigator.of(context).pushNamed('/Rub', arguments: coin);
-    },
-            );
+      leading: Image.network(coindetails.imageURL),
+      title: Text(
+        coin.name,
+        style: theme.textTheme.bodySmall,
+      ),
+      subtitle: Text(
+        '${coindetails.priceInRUB} P',
+        style: theme.textTheme.labelSmall,
+      ),
+      trailing: const Icon(Icons.arrow_forward_ios),
+      onTap: () {
+        Navigator.of(context).pushNamed('/Rub', arguments: coin);
+      },
+    );
   }
 }
