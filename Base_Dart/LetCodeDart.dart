@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 void main(){
   /*Number 1 'Two Sum'*/
   // Soulution first = Soulution();
