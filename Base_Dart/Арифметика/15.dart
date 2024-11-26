@@ -2,7 +2,7 @@ import 'dart:io';
 import 'dart:math';
 
 void main() {
-  var n = double.parse(stdin.readLineSync()!);
+  var n = int.parse(stdin.readLineSync()!);
 
   var q = (2 * pow(n, 2) - (4 * n) + 10) / (2 * n);
 
